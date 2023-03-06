@@ -17,6 +17,15 @@ public class HomeTask {
         list.add(20);
         System.out.println("list = " + list);
 
+        ArrayList<Integer> list2 = new ArrayList<>();
+        list2.add(4);
+        list2.add(-90);
+        list2.add(67);
+        list2.add(4);
+        list2.add(0);
+        list2.add(34);
+        list2.add(7);
+
 
         System.out.println("max element = " + max(list));
         System.out.println("min element = " + min(list));
@@ -43,6 +52,15 @@ public class HomeTask {
 
         revert(list);
         System.out.println("revert list = " + list);
+
+        System.out.println("list = " + list);
+        BubbleSort(list);
+        System.out.println("BubbleSort's List = " + list);
+
+        System.out.println("list2 = " + list2);
+        selectionSort(list2);
+        System.out.println("SelectionSort's List = " + list2);
+
 
     }
 
@@ -121,6 +139,34 @@ public class HomeTask {
             }
         }
         return index;
+    }
+
+    public static void BubbleSort(ArrayList<Integer> list){
+        for (int i = 0; i < list.size(); i++){
+            int currentValue = list.get(i);
+            int index = i;
+            for (int j = i + 1; j < list.size(); j++){
+                if (list.get(i) > list.get(j)){
+                    swap(list, i, j);
+                }
+            }
+        }
+    }
+
+    public static void selectionSort(ArrayList<Integer> list){
+        for (int i = 0; i < list.size(); i++){
+            int min = list.get(i);
+            int minIndex = i;
+            for (int j = i + 1; j < list.size(); j++){
+                if (list.get(j) < min){
+                    min = list.get(j);
+                    minIndex = j;
+                }
+            if (min != list.get(i)){
+                swap(list, i, minIndex);
+            }
+            }
+        }
     }
 
     public static void revert(ArrayList<Integer> list){
