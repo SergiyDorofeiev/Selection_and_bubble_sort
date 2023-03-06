@@ -1,0 +1,3 @@
+/Users/sergijdorofeev/Projects/vizdebug/cmake-build-debug/CMakeFiles/vizdebug.dir
+/Users/sergijdorofeev/Projects/vizdebug/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/sergijdorofeev/Projects/vizdebug/cmake-build-debug/CMakeFiles/rebuild_cache.dir
